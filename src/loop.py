@@ -7,6 +7,7 @@ from src.optimizers import (
     RandomSearch,
     VanillaBayesianOptimization,
     BayesianGradientAscent,
+    SecondOrderBayesianOptimization
 )
 
 
@@ -35,7 +36,7 @@ def loop(
     max_iterations: Optional[int],
     max_objective_calls: Optional[int],
     objective: Union[Callable[[torch.Tensor], torch.Tensor], EnvironmentObjective],
-    Optimizer: Union[RandomSearch, BayesianGradientAscent, VanillaBayesianOptimization],
+    Optimizer: Union[RandomSearch, BayesianGradientAscent, VanillaBayesianOptimization, SecondOrderBayesianOptimization],
     optimizer_config: Optional[Dict],
     verbose=True,
 ) -> Tuple[list, list]:

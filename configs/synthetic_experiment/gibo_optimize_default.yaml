@@ -61,7 +61,7 @@ optimizer_config:
         lower_bound:
         upper_bound:
     delta: 0.2
-    epsilon_diff_acq_value: 0.1
+ w
     generate_initial_data:
     standard_deviation_scaling: False
     normalize_gradient: True

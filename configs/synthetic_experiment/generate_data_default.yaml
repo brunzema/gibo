@@ -1,6 +1,6 @@
-out_dir : './experiments/synthetic_experiments/test_experiment/'
-dimensions : [4, 8, 12, 16, 20, 24, 28, 32, 36]
-num_objectives : 40
+out_dir : './experiments/synthetic_experiments/test_runs/'
+dimensions : [4, 12, 20, 28, 36]
+num_objectives : 10
 num_samples : 1000
 noise_variance : 0.01
 factor_lengthscale : 2

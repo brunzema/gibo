@@ -17,7 +17,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Generate data for synthetic functions."
     )
-    parser.add_argument("-c", "--config", type=str, help="Path to config file.")
+    parser.add_argument("-c", "--config", type=str, help="Path to config file.", default="./configs/synthetic_experiment/generate_data_test.yaml")
 
     args = parser.parse_args()
     with open(args.config, "r") as f:

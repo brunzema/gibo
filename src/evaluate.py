@@ -201,6 +201,8 @@ def f_max_new(f_max_old: dict, list_rewards_optimizers: list):
             global_max = torch.tensor(f_max_new[dim])
             max_rewards = torch.max(rewards_optimizer[dim_index], axis=-1).values
             for i, g_m in enumerate(global_max):
+                if i == len(max_rewards):
+                    break
                 if g_m < max_rewards[i]:
                     f_max_new[dim][i] += -g_m.item() + max_rewards[i].item() + 1e-2
     return f_max_new

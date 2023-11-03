@@ -19,9 +19,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Run optimization of synthetic functions."
     )
-    parser.add_argument("-c", "--config", type=str, help="Path to config file.")
+    parser.add_argument("-c", "--config", type=str, help="Path to config file.", default="configs/synthetic_experiment/gibo_default.yaml")
     parser.add_argument(
-        "-cd", "--config_data", type=str, help="Path to data config file."
+        "-cd", "--config_data", type=str, help="Path to data config file.", default="configs/synthetic_experiment/generate_data_default.yaml"
     )
 
     args = parser.parse_args()
