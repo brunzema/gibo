@@ -10,7 +10,8 @@ from src.optimizers import (
     CMAES,
     VanillaBayesianOptimization,
     BayesianGradientAscent,
-    SecondOrderBayesianOptimization
+    SecondOrderBayesianOptimization,
+    ParameterFreeBayesianGradientAscent
 )
 from src.model import ExactGPSEModel, DerivativeExactGPSEModel
 from src.acquisition_function import optimize_acqf_vanilla_bo, optimize_acqf_custom_bo
@@ -45,6 +46,7 @@ insertion_config = {
         "rs": RandomSearch,
         "cmaes": CMAES,
         "csbo": SecondOrderBayesianOptimization,
+        "gibo_parafree": ParameterFreeBayesianGradientAscent
     },
     "optimizer_config": {
         "OptimizerTorch": {"sgd": torch.optim.SGD, "adam": torch.optim.Adam},

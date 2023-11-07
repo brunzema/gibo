@@ -1,6 +1,6 @@
-method: csbo
+method: gibo_parafree
 
-out_dir: './experiments/synthetic_experiments/test_experiment/csbo/'
+out_dir: './experiments/synthetic_experiments/test_experiment/gibo_parafree/'
 
 # Either choose max_iterations or max_objective_calls not None.
 max_iterations:
@@ -56,7 +56,7 @@ optimizer_config:
         lower_bound:
         upper_bound:
     delta: 0.2
-    epsilon_diff_acq_value:
+    epsilon_diff_acq_value: 0.1
     generate_initial_data:
     standard_deviation_scaling: False
     normalize_gradient: True
